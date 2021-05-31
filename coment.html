@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <link href="favicon.ico" type="image/x-icon" rel="icon">
+    <title>Marvel Heroes</title>
+</head>
+
+<body>
+    <header>
+
+        <a class="header-a" href="Home.html">
+            <img class='img-header' src="img/sim-header.png" width="90px" height="60px" alt="Dr. Strange">
+        </a>
+
+        </nav>
+
+    </header>
+
+    <div class="div-fondo">
+
+        <form class="formulario">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" class="inputs" placeholder="Jhon Cena" id="nombre" name="nombre" pattern="[a-zA-ZÀ-ÿ\s]{1,40}" required>
+            <p>No puede incluir numeros</p>
+            <label for="email">E-mail:</label>
+            <input type="email" class="inputs" placeholder="correo@correo.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email" name="email" required>
+            <p>Debe tener @ y . con su respectivo dominio ej: correo@gmail.com</p>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" class="inputs" id="telefono" placeholder="314123456" pattern="[0-9]{9,14}" name="telefono" required>
+            <p>Solo se aceptan numero de cadenas de 9 caractere minimo</p>
+            <label for="comentarios">Comentarios</label>
+            <textarea name="comantarios" id="comentarios" cols="30" rows="7" required></textarea>
+
+
+            <div class="intereses">
+                <select name="intereses" id="intereses">
+                    <option value="reclamos">Reclamos</option>
+                    <option value="comentarios">Comentarios</option>
+                    <option value="otros">Otros</option>
+                </select>
+            </div>
+            <<input type="submit" class="button" value="Enviar">
+        </form>
+        <br>
+
+    </div>
+
+    <footer>
+
+        <p id="p-footer"></p>
+        <a href="https://github.com/IgnacioNievas " class="nav-a tooltip "><i class="fab fa-github "  > </i><span class="foot-i ">Git Hub</span></a>
+        <a href="https://www.facebook.com/nacho.ele " class="nav-a tooltip "> <i class="fab fa-facebook "> </i><span class="foot-i ">Facebook</span></a>
+        <a href="https://www.instagram.com/nievas.ignacio/ " class="nav-a tooltip "> <i class="fab fa-instagram "></i><span class="foot-i "> Instagram</span></a>
+        <a href="https://twitter.com/Nacho_BJiuJitsu " class="nav-a tooltip "> <i class="fab fa-twitter "></i><span class="foot-i ">Twitter</span></a>
+        <a href="https://www.marvel.com/characters/doctor-strange-stephen-strange " class="nav-a tooltip "> <i class="fab fa-monero "></i><span class="foot-i ">Marvel</span></a>
+
+
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-analytics.js"></script>
+    <script src="https://kit.fontawesome.com/b0f48e613f.js " crossorigin="anonymous "></script>
+    <script src=".src/home.js "></script>
+    <script src=".src/footer.js "></script>
+
+</body>
+
+
+</html>
