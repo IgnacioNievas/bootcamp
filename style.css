@@ -1,0 +1,561 @@
+/*estilos que solo afecta a todas las paginas*/
+
+body {
+    margin: auto;
+    background-color: black;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+}
+
+footer {
+    background-color: black;
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    bottom: 0;
+}
+
+.header-a {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-rows {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.foot-i {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: blue;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.foot-i::after,
+.dot::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover .foot-i,
+.tooltip:hover .dot {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.nav-a:hover {
+    color: blue;
+    text-shadow: 2px 2px 5px red;
+}
+
+.img-header:hover {
+    opacity: 0.7;
+}
+
+.div-fondo {
+    background-image: url('img/fondo-body.png');
+    padding: 115px 0px 0px 0px;
+}
+
+.btn-bars {
+    display: none;
+}
+
+.fast {
+    -moz-animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -moz-animation-name: change;
+    -webkit-animation-name: change;
+    animation-name: change;
+}
+
+.slow {
+    -moz-animation-duration: 2s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -moz-animation-name: change;
+    -webkit-animation-name: change;
+    animation-name: change;
+}
+
+@keyframes change {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width:600px) {
+    header {
+        height: auto;
+        width: 35%;
+    }
+    .nav-rows {
+        flex-flow: column wrap;
+    }
+    .nav-a {
+        font-size: x-small;
+    }
+    .btn-bars {
+        display: block;
+        border: none;
+        background: transparent;
+        color: white;
+        cursor: pointer;
+        margin-left: 39%;
+    }
+    .nav {
+        display: none;
+    }
+    .ubi {
+        margin-top: 53px;
+    }
+    img {
+        margin: auto;
+    }
+}
+
+
+/*estilos que solo afecta a la pagina home*/
+
+.div-header-home {
+    background-color: black;
+    display: grid;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-home-coment {
+    border-radius: 15px 50px;
+    cursor: pointer;
+    color: white;
+    background: transparent;
+}
+
+.div-coment-home {
+    background-image: url('img/section-home.png');
+    background-repeat: no-repeat;
+    background-size: 1400px 450px;
+    background-position-y: 120px;
+    background-color: rgb(201, 18, 201);
+    padding: 200px;
+}
+
+
+/* estilo del coment*/
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    height: 45px;
+    width: 350px;
+    background: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.button:hover {
+    box-shadow: 3px 0px 30px lightgray;
+}
+
+.intereses label {
+    font-size: 12px;
+}
+
+#email,
+#comentarios,
+#telefono,
+.formulario label,
+.intereses {
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.intereses {
+    margin-top: 10px;
+}
+
+.inputs {
+    height: 25px;
+    width: 200px;
+}
+
+input:focus,
+textarea:focus {
+    background: lightgray;
+    box-shadow: 3px 0px 30px lightgray;
+}
+
+.formulario p {
+    background-color: #333;
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+}
+
+
+/*estilos que solo afecta a la pagina History*/
+
+.dot {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333;
+    color: black;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.div-history {
+    background-image: url('img/section-history.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 90px;
+    padding: 135px 200px;
+    background-color: white;
+}
+
+.p-history {
+    width: 50%;
+}
+
+.div-his {
+    display: none;
+    background-image: url('img/fondo-body.png');
+    padding: 135px 200px;
+}
+
+.slider-arrow {
+    color: black;
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+}
+
+.slider-arrow:hover {
+    transform: translate(20%);
+}
+
+#arrow-prev {
+    left: 20px;
+    top: 250px;
+}
+
+#arrow-next {
+    right: 20px;
+    top: 250px;
+}
+
+.dots-wrapper {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    bottom: 40px;
+}
+
+.dot-nav {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 0 8px;
+    border: 2px solid black;
+}
+
+.dot-nav:hover,
+.btn-home-coment:hover {
+    background-color: rgb(201, 18, 201);
+    ;
+}
+
+.active-dot {
+    background-color: rgb(201, 18, 201);
+    ;
+}
+
+
+/* estilo del enemey*/
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active-arrow {
+    transform: translate(75%, 75%);
+}
+
+.ubi {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.low {
+    position: relative;
+    top: 20px;
+}
+
+.box {
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.288);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    border-radius: 23px;
+    background-color: teal;
+    margin-left: 20px;
+}
+
+.box img {
+    border-radius: 50px;
+    margin-left: 106px;
+    margin-top: 5px;
+}
+
+.box img:hover {
+    border-style: solid;
+    border-color: black;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.name {
+    color: black;
+    text-align: center;
+}
+
+.arrow,
+.cancel {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: white;
+    color: rgb(70, 70, 70);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 0.4s;
+    border-radius: 23px;
+    bottom: 0;
+    right: 0;
+}
+
+.arrow i {
+    transform: rotate(45deg);
+}
+
+.second {
+    position: absolute;
+    background: #0f2027;
+    border-radius: 23px;
+    width: 100%;
+    height: 100%;
+    padding: 0 30px 20px 0;
+    transition: all 0.4s;
+    top: 0;
+    left: 0;
+}
+
+.off {
+    transform: translate(-85%, -92%) rotate(90deg);
+}
+
+.active {
+    transform: translate(0) rotate(0);
+}
+
+.second div {
+    display: inline-block;
+    color: rgb(155, 155, 155);
+    padding: 5px 10px;
+    margin: 4px 4px 4px 0;
+}
+
+.descripcion {
+    padding: 2%;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.descrip {
+    font-size: 1rem;
+    padding: 2%;
+}
+
+.descrip:hover,
+.descripcion:hover {
+    font-weight: bolder;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.79rem;
+}
+
+.div-none {
+    display: none;
+    margin-bottom: 30px;
+}
+
+
+/*estilo de power*/
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 338px;
+    border: none;
+    text-align: left;
+    font-size: 15px;
+}
+
+.h1 {
+    text-decoration: underline;
+}
+
+.content {
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    width: 338px;
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.figure-left {
+    float: left;
+}
+
+.figure-right {
+    float: right;
+}
+
+.a-power {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.a-power:hover {
+    font-weight: bolder;
+    color: blue;
+}
+
+
+/*estilo de comic*/
+
+.div-cards-comic {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flip-card {
+    width: 320px;
+    height: 310px;
+    margin-left: 10px;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 black;
+    background-color: black;
+}
+
+.lower {
+    transform: scale(0.5) translateY(10px);
+    transition: all 0.4s;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.flip-card-back {
+    background-color: #2980b9;
+    color: white;
+    transform: translate(0, -100%);
+    visibility: hidden;
+}
+
+.arrows,
+.cancels {
+    visibility: hidden;
+    transform: translate(-400%, 120%) rotate(90deg);
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: white;
+    color: rgb(70, 70, 70);
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: transform 0.4s;
+    border-radius: 23px;
+    bottom: 0;
+    right: 0;
+}
+
+.acti {
+    visibility: visible;
+    transform: translate(-400%, 0) rotate(90deg);
+}
+
+.sin {
+    transform: translate(0);
+    transition: all 0.2s;
+    visibility: visible;
+}
