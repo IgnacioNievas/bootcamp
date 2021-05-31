@@ -1,14 +1,12 @@
 'use strict'
-
-'use strict'
 var firebaseConfig = {
-    apiKey: "AIzaSyCWIOSlcxPQ3eppYm4cHXSQiCHlYK97CaQ",
-    authDomain: "comentarios-2b309.firebaseapp.com",
-    projectId: "comentarios-2b309",
-    storageBucket: "comentarios-2b309.appspot.com",
-    messagingSenderId: "1069149675998",
-    appId: "1:1069149675998:web:3d1cea38647b71b2007d4f",
-    measurementId: "G-GVJNKZG5RW"
+    apiKey: "xxx",
+    authDomain: "xxxx",
+    projectId: "xxxx",
+    storageBucket: "xxx",
+    messagingSenderId: "xxx",
+    appId: "xxxx",
+    measurementId: "xxxx"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
