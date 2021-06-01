@@ -43,3 +43,26 @@ CANC.forEach((can, i) => {
         slide(i);
     })
 });
+
+function slide_div(div_index) {
+    let div = document.querySelectorAll('.slide');
+    let dots = document.querySelectorAll('.dot-nav');
+
+    for (let i = 0; i < div.length; i++) {
+        div[i].style.display = 'none';
+        dots[i].classList.remove('active-dot');
+    }
+
+    div[div_index].style.display = 'flex';
+    dots[div_index].classList.add('active-dot');
+
+}
+
+PREV.addEventListener('click', () => {
+    slide_div(0);
+});
+
+
+NEXT.addEventListener('click', () => {
+    slide_div(1);
+});
