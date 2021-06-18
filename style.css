@@ -1,3 +1,4 @@
+
 /*estilos que solo afecta a todas las paginas*/
 
 body {
@@ -559,3 +560,4 @@ textarea:focus {
     transition: all 0.2s;
     visibility: visible;
 }
+
